@@ -1,0 +1,13 @@
+{
+    "docker.commands.run": [
+        {
+            "label": "Default run command",
+            "template": "${config:docker.dockerPath} run --rm ${exposedPorts} ${tag}"
+        },
+        {
+            "label": "Run rsp_tcp containers",
+            "template": "${config:docker.dockerPath} run --rm --device /dev/bus/usb ${exposedPorts} ${tag}",
+            "match": "rsptcp_container"
+        }
+    ]
+}
